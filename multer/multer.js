@@ -11,4 +11,4 @@ var storage = multer.diskStorage({
     cb(null, Date.now() + file.originalname)
   }
 })
-  exports.upload = multer({ storage: storage })
+exports.upload = multer({ storage: storage })

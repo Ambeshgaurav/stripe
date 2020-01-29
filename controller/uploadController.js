@@ -1,6 +1,8 @@
 
 
 function uploadSingleFile(req, res) {
+   
+    
     var fileinfo = req.file;
     var title = req.body;
     if (fileinfo) {
@@ -23,7 +25,13 @@ function uploadSingleFile(req, res) {
 }
 function uploadMultipleFiles(req, res) {
     if (req.files) {
-        console.log(req.files);
+       var file=req.files.file
+       console.log("-----file------",file);
+    //    console.log("----filname---",file.name);
+    //    console.log("----filetype---",file.type);
+       
+    
+        
         res.send({
             message: "file sucessfully uploaded",
             data: {file:req.files},
